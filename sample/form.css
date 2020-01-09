@@ -68,6 +68,27 @@ body {
     background-color: #394a52;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tbody > tr:hover {
+    background-color: #555555;
+    color: #dddddd;
+
+}
+
 @media screen and (max-width: 640px) {
     .form-group {
         display: block;

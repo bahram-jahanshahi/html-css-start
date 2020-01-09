@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Form Sample</title>
     <link rel="stylesheet" href="form.css">
+    <script>
+        function onClick() {
+            let title  = document.getElementById("title").value;
+            if (title.length < 3) {
+                alert("Title has to be more than three characters");
+            } else {
+                console.log(title);
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -12,12 +22,12 @@
             Add New Article
         </div>
         <div class="panel-body">
-            <form action="#" method="get">
+            <form method="get">
 
                 <div class="form-group">
                     <div class="form-label">Title</div>
                     <div class="form-input">
-                        <input class="form-control" type="text" name="title">
+                        <input class="form-control" type="text" name="title" id="title">
                     </div>
                 </div>
                 <div class="form-group">
@@ -26,10 +36,95 @@
                         <textarea class="form-control" rows="7"></textarea>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-label">Category</div>
+                    <div class="form-input">
+                        <select class="form-control">
+                            <option value="1">Category 1</option>
+                            <option value="2">Category 2</option>
+                            <option value="3">Category 3</option>
+                        </select>
+                    </div>
+                </div>
                 <div style="text-align: right; width: 100%; margin-top: 15px;">
-                    <input class="button" type="submit" value="Submit">
+                    <input class="button" type="submit" value="Submit" onclick="onClick()">
                 </div>
             </form>
+        </div>
+    </div>
+    <!-- Article List -->
+    <div class="panel" style="margin-top: 30px">
+        <div class="panel-head">
+            Article List
+        </div>
+        <div class="panel-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Content</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Article 1</td>
+                        <td>C3</td>
+                        <td>Content 1</td>
+                        <td>
+                            <input class="button" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Article 2</td>
+                        <td>C7</td>
+                        <td>Content 2</td>
+                        <td>
+                            <input class="button" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Article 3</td>
+                        <td>C3</td>
+                        <td>Content 3</td>
+                        <td>
+                            <input class="button" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Article 4</td>
+                        <td>C3</td>
+                        <td>Content 1</td>
+                        <td>
+                            <input class="button" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Article 5</td>
+                        <td>C7</td>
+                        <td>Content 2</td>
+                        <td>
+                            <input class="button" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Article 6</td>
+                        <td>C3</td>
+                        <td>Content 3</td>
+                        <td>
+                            <input class="button" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
