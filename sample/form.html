@@ -13,6 +13,17 @@
                 console.log(title);
             }
         }
+
+        function loadText() {
+            let http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("message").innerHTML = http.response;
+                }
+            }
+            http.open("GET", "ajax.txt", true);
+            http.send();
+        }
     </script>
 </head>
 <body>
@@ -47,7 +58,10 @@
                     </div>
                 </div>
                 <div style="text-align: right; width: 100%; margin-top: 15px;">
-                    <input class="button" type="submit" value="Submit" onclick="onClick()">
+                    <input class="button" type="submit" value="Submit" onclick="loadText()">
+                </div>
+                <div id="message" style="color: red">
+
                 </div>
             </form>
         </div>
